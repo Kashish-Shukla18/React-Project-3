@@ -6,14 +6,19 @@ export default function App() {
         lastName: "Shukla",
         phone: "+1 (719) 555-1212",
         email: "itsmyrealname@example.com",
-        favorite: true
+        isFavorite: true
     })
     
-    let starIcon = contact.Favorite ? "star-filled.png" : "star-empty.png"
+    let starIcon = contact.isFavorite ? "star-filled.png" : "star-empty.png"
     
-    function toggleFavorite() {
-        console.log("Toggle Favorite")
-    }
+function toggleFavorite() {
+        setContact(prevContact => {
+            return {
+                ...prevContact,
+                isFavorite: !prevContact.isFavorite
+            }
+        })
+    } 
     
     return (
         <main>
