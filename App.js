@@ -2,14 +2,14 @@ import React from "react"
 
 export default function App() {
     const [contact, setContact] = React.useState({
-        firstName: "John",
-        lastName: "Doe",
+        firstName: "Kashish",
+        lastName: "Shukla",
         phone: "+1 (719) 555-1212",
         email: "itsmyrealname@example.com",
-        isFavorite: true
+        favorite: true
     })
     
-    let starIcon = contact.isFavorite ? "star-filled.png" : "star-empty.png"
+    let starIcon = contact.Favorite ? "star-filled.png" : "star-empty.png"
     
     function toggleFavorite() {
         console.log("Toggle Favorite")
